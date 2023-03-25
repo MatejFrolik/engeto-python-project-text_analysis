@@ -4,6 +4,9 @@ author: Matěj Frolík
 email: matejfrolik1@seznam.cz
 discord: Mates F.#4204
 '''
+
+# texts 
+
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer,
 Fossil Butte is a ruggedly impressive
@@ -31,3 +34,10 @@ other freshwater genera and herring similar to those
 in modern oceans. Other fish such as paddlefish,
 garpike and stingray are also present.'''
 ]
+
+#another data
+users = ('bob', 'ann', 'mike', 'liz')
+password = ('123', 'pass123', 'password123', 'pass123')
+sep = '-' * 60
+star = '*'
+
