@@ -7,7 +7,7 @@ discord: Mates F.#4204
 
 # texts 
 
-TEXTS = ['''
+texts = ['''
 Situated about 10 miles west of Kemmerer,
 Fossil Butte is a ruggedly impressive
 topographic feature that rises sharply
@@ -38,28 +38,46 @@ garpike and stingray are also present.'''
 #další data
 users = ('bob', 'ann', 'mike', 'liz')
 password = ('123', 'pass123', 'password123', 'pass1234')
-sep = '-' * 60
+sep = '-' * 40
+dblsep = '=' * 40
 star = '*'
 import pwinput #naistalovaný modul pwinput v terminálu: pip install pwinput
 
 #pozdravení uživatele 
-print(sep, end = '\n')
+print(dblsep, end = '\n')
 print(f'Welcome in our app...')
 print(f"Users: {' , '.join(users)} ")
-print(sep, end = '\n')
+print(dblsep, end = '\n')
 
-#zadání jména a hesla s jednou možností opravy 
+#zadání jména a hesla s nekonečnou možností opravy  
 attemps = 0
-while attemps < 2:
+while True:
     user = input('Choose from users: ')
     passwrd = pwinput.pwinput(prompt='Enter your password: ', mask='*')
 
     if user in users and passwrd in password and users.index(user) is password.index(passwrd):
+        print(sep, end='\n')
         print(f'Welcome to the app, {user}')
         print('We have 3 texts to be analyzed.')
+        print(sep, end='\n')
         break
     else:
-        print('Incorrect credentials. Check if you have Caps lock on and try again.')
+        print('Unregistred user. Check if you have Caps lock on and try again...')
         attemps += 1
         continue
 
+#zadání textu a ověření vstupu s možností někonečné opravy
+
+attemps2 = 0
+while True:
+    enter_text = input("Enter text's number: ")
+
+    if enter_text.isnumeric() and len(texts) >= int(enter_text):
+        print(f'Your choice is text{enter_text}')
+        break
+    else:
+        print('Wrong attribute or text\'s number, try it again...')
+        continue
+
+
+    
