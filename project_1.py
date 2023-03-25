@@ -35,9 +35,16 @@ in modern oceans. Other fish such as paddlefish,
 garpike and stingray are also present.'''
 ]
 
-#another data
+#další data
 users = ('bob', 'ann', 'mike', 'liz')
 password = ('123', 'pass123', 'password123', 'pass123')
 sep = '-' * 60
 star = '*'
+
+#pozdravení uživatele a zadání iniciálů
+print(sep, end = '\n')
+print(f'Welcome in our app...')
+print(f"Users: {' , '.join(users)} ")
+print(sep, end = '\n')
+
 
