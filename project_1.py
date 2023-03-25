@@ -1,5 +1,8 @@
 '''
-author =
+projekt_1.py: První projekt do Engeto Online Python Akademie.
+author: Matěj Frolík
+email: matejfrolik1@seznam.cz
+discord: Mates F.#4204
 '''
 TEXTS = ['''
 Situated about 10 miles west of Kemmerer,
