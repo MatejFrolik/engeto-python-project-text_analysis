@@ -78,6 +78,26 @@ while True:
     else:
         print('Wrong attribute or text\'s number, try it again...')
         continue
+print(sep, end='\n')
+
+#práce s vybraným textem
+# 1. počet slov
+# 2. počet slov začínajících velkým písmenem
+# 3. počet slov psaných velkými písmeny
+# 4. počet slov psaných malými písmeny
+# 5. počet čísel (ne cifer)
+# 6. suma všech čísel (ne cifer) v textu
+
+selected_text = texts[int(enter_text)-1]
+
+raw_words = list()
+for word in selected_text.split():
+    raw_words.append(
+        word.strip(",.:;").lower()
+    )
+words_count = len(raw_words)
+
+
 
 
     
