@@ -37,14 +37,29 @@ garpike and stingray are also present.'''
 
 #další data
 users = ('bob', 'ann', 'mike', 'liz')
-password = ('123', 'pass123', 'password123', 'pass123')
+password = ('123', 'pass123', 'password123', 'pass1234')
 sep = '-' * 60
 star = '*'
+import pwinput #naistalovaný modul pwinput v terminálu: pip install pwinput
 
-#pozdravení uživatele a zadání iniciálů
+#pozdravení uživatele 
 print(sep, end = '\n')
 print(f'Welcome in our app...')
 print(f"Users: {' , '.join(users)} ")
 print(sep, end = '\n')
 
+#zadání jména a hesla s jednou možností opravy 
+attemps = 0
+while attemps < 2:
+    user = input('Choose from users: ')
+    passwrd = pwinput.pwinput(prompt='Enter your password: ', mask='*')
+
+    if user in users and passwrd in password and users.index(user) is password.index(passwrd):
+        print(f'Welcome to the app, {user}')
+        print('We have 3 texts to be analyzed.')
+        break
+    else:
+        print('Incorrect credentials. Check if you have Caps lock on and try again.')
+        attemps += 1
+        continue
 
