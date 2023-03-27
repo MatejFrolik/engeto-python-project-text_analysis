@@ -96,7 +96,7 @@ for word in selected_text.split():
     raw_words.append(word.strip(",.:;").lower()
     )
 words_count = len(raw_words)
-print(f'Počet slov: {words_count}')
+print(f'Počet všech slov: {words_count}')
 
 #funkce na výpočet počtu slov s počátečním velkým písmenem
 upper1_count = 0
@@ -104,20 +104,23 @@ split_text = selected_text.split()
 for i in split_text:
      if i.istitle():
          upper1_count = upper1_count + 1
-print(f'Počet slov velkýma:{upper1_count}')
+print(f'Počet slov začínající velkými písmeny:{upper1_count}')
 
 #funkce na výpočet počtu slov ALL UPPER
 upper1_count = 0
 for i in split_text:
      if i.isupper():
          upper1_count = upper1_count + 1
-print(f'Počet slov velkýma všechno:{upper1_count}')
+print(f'Počet slov psaných velkými písmeny:{upper1_count}')
 
 #ekvivalentní výpočet počtu slov ALL UPPER - funkce MAP
 # all_upper = sum(map(str.isupper, selected_text.split())) 
 # print(all_upper)
 
-
+#počet čísela  a jejich součet pomocí comprehension syntaxe
+numbers = [int(i) for i in selected_text.split() if i.isdigit()]
+print(f'Počet čísel: {len(numbers)}')
+print(f'Součet všech čísel: {sum(numbers)} ')
 
 
 
