@@ -92,17 +92,17 @@ selected_text = texts[int(enter_text)-1]
 
 raw_words = list()
 for word in selected_text.split():
-    raw_words.append(
-        word.strip(",.:;").lower()
+    raw_words.append(word.strip(",.:;").lower()
     )
 words_count = len(raw_words)
+print(f'Počet slov: {words_count}')
 
-s = selected_text.strip()
-count = 1
-for i in s:
-    if i.isupper():
-         count = count + 1
-print(count)
+upper1_count = 0
+split_text = selected_text.split()
+for i in split_text:
+     if i.istitle():
+         upper1_count = upper1_count + 1
+print(f'Počet slov velkýma:{upper1_count}')
 
 
 
