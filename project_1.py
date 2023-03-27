@@ -96,7 +96,7 @@ for word in selected_text.split():
     raw_words.append(word.strip(",.:;").lower()
     )
 words_count = len(raw_words)
-print(f'Počet všech slov: {words_count}')
+print(f'There are {words_count} words in the selected text')
 
 #funkce na výpočet počtu slov s počátečním velkým písmenem
 upper1_count = 0
@@ -104,14 +104,20 @@ split_text = selected_text.split()
 for i in split_text:
      if i.istitle():
          upper1_count = upper1_count + 1
-print(f'Počet slov začínající velkými písmeny:{upper1_count}')
+print(f'There are {upper1_count} titlecase words')
 
 #funkce na výpočet počtu slov ALL UPPER
 upper1_count = 0
 for i in split_text:
-     if i.isupper():
+     if i.isupper() and i.isalpha():
          upper1_count = upper1_count + 1
-print(f'Počet slov psaných velkými písmeny:{upper1_count}')
+print(f'There are {upper1_count} uppercase words')
+
+upper1_count = 0
+for i in split_text:
+     if i.islower():
+         upper1_count = upper1_count + 1
+print(f'There are {upper1_count} lowercase words')
 
 #ekvivalentní výpočet počtu slov ALL UPPER - funkce MAP
 # all_upper = sum(map(str.isupper, selected_text.split())) 
@@ -119,8 +125,10 @@ print(f'Počet slov psaných velkými písmeny:{upper1_count}')
 
 #počet čísela  a jejich součet pomocí comprehension syntaxe
 numbers = [int(i) for i in selected_text.split() if i.isdigit()]
-print(f'Počet čísel: {len(numbers)}')
-print(f'Součet všech čísel: {sum(numbers)} ')
+print(f'There are {len(numbers)} numeric strings')
+print(f'The sum of all the numbers: {sum(numbers)}')
+
+print(sep, end = '\n')
 
 
 
