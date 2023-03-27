@@ -90,6 +90,7 @@ print(sep, end='\n')
 
 selected_text = texts[int(enter_text)-1]
 
+#funkce na výpočet počtu slov
 raw_words = list()
 for word in selected_text.split():
     raw_words.append(word.strip(",.:;").lower()
@@ -97,12 +98,25 @@ for word in selected_text.split():
 words_count = len(raw_words)
 print(f'Počet slov: {words_count}')
 
+#funkce na výpočet počtu slov s počátečním velkým písmenem
 upper1_count = 0
 split_text = selected_text.split()
 for i in split_text:
      if i.istitle():
          upper1_count = upper1_count + 1
 print(f'Počet slov velkýma:{upper1_count}')
+
+#funkce na výpočet počtu slov ALL UPPER
+upper1_count = 0
+for i in split_text:
+     if i.isupper():
+         upper1_count = upper1_count + 1
+print(f'Počet slov velkýma všechno:{upper1_count}')
+
+#ekvivalentní výpočet počtu slov ALL UPPER - funkce MAP
+# all_upper = sum(map(str.isupper, selected_text.split())) 
+# print(all_upper)
+
 
 
 
