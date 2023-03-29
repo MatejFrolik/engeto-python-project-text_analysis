@@ -77,25 +77,25 @@ There are 38 lowercase words.
 There are 3 numeric strings.
 The sum of all the numbers 8510
 ----------------------------------------
-LEN|  OCCURENCES  |NR.
+LEN|  OCCURENCES/NR.
 ----------------------------------------
-  1|*             |1
-  2|*********     |9
-  3|******        |6
-  4|***********   |11
-  5|************  |12
-  6|***           |3
-  7|****          |4
-  8|*****         |5
-  9|*             |1
- 10|*             |1
- 11|*             |1
+  1|*/1
+  2|*********/9
+  3|******/6
+  4|***********/11
+  5|************/12
+  6|***/3
+  7|****/4
+  8|*****/5
+  9|*/1
+ 10|*/1
+ 11|*/1
  ```
 
  Pokud uživatel není registrovaný:
 
  ```
- username:marek
+username:marek
 password:123
-unregistered user, terminating the program..
+Unregistred user. Check if you have Caps lock on and try again...
 ```
