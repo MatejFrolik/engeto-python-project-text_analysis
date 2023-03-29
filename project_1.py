@@ -90,7 +90,7 @@ print(sep, end='\n')
 
 selected_text = texts[int(enter_text)-1]
 
-#funkce na výpočet počtu slov
+#výpočet počtu slov
 raw_words = list()
 for word in selected_text.split():
     raw_words.append(word.strip(",.:;").lower()
@@ -98,7 +98,7 @@ for word in selected_text.split():
 words_count = len(raw_words)
 print(f'There are {words_count} words in the selected text')
 
-#funkce na výpočet počtu slov s počátečním velkým písmenem
+#výpočet počtu slov s počátečním velkým písmenem
 upper1_count = 0
 split_text = selected_text.split()
 for i in split_text:
@@ -106,7 +106,7 @@ for i in split_text:
          upper1_count = upper1_count + 1
 print(f'There are {upper1_count} titlecase words')
 
-#funkce na výpočet počtu slov ALL UPPER
+#výpočet počtu slov ALL UPPER
 upper1_count = 0
 for i in split_text:
      if i.isupper() and i.isalpha():
@@ -128,7 +128,20 @@ numbers = [int(i) for i in selected_text.split() if i.isdigit()]
 print(f'There are {len(numbers)} numeric strings')
 print(f'The sum of all the numbers: {sum(numbers)}')
 
-
+#graf pro delků slov a jejich počet v textu
+seq = list(map(len, raw_words))
+counts = {}
+for num in seq:
+    if num not in counts:
+        counts[num] = 1
+    else:
+        counts[num] = counts[num] + 1
+print(sep, end = '\n')
+print('len  |  occurences/nr'.upper())
+print(sep, end = '\n')
+for key, value in sorted(counts.items()):
+    print(f"{key:>4} |  {value*star:>1}/{value}")
+print(sep) 
 
 
     
