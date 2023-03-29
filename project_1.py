@@ -70,7 +70,7 @@ while True:
 
 
 while True:
-    enter_text = input("Enter text's number: ")
+    enter_text = input("Enter text's number btw. 1 and 3: ")
 
     if enter_text.isnumeric() and len(texts) >= int(enter_text):
         print(f'Your choice is text{enter_text}')
