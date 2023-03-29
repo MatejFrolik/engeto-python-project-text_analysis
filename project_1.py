@@ -50,7 +50,7 @@ print(f"Users: {' , '.join(users)} ")
 print(dblsep, end = '\n')
 
 #zadání jména a hesla s nekonečnou možností opravy  
-attemps = 0
+#attemps = 0
 while True:
     user = input('Choose from users: ')
     passwrd = pwinput.pwinput(prompt='Enter your password: ', mask='*')
@@ -63,12 +63,12 @@ while True:
         break
     else:
         print('Unregistred user. Check if you have Caps lock on and try again...')
-        attemps += 1
+#        attemps += 1
         continue
 
 #zadání textu a ověření vstupu s možností někonečné opravy
 
-attemps2 = 0
+
 while True:
     enter_text = input("Enter text's number: ")
 
@@ -128,7 +128,6 @@ numbers = [int(i) for i in selected_text.split() if i.isdigit()]
 print(f'There are {len(numbers)} numeric strings')
 print(f'The sum of all the numbers: {sum(numbers)}')
 
-print(sep, end = '\n')
 
 
 
