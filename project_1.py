@@ -5,6 +5,8 @@ email: matejfrolik1@seznam.cz
 discord: Mates F.#4204
 '''
 
+import pwinput #naistalovaný modul pwinput v terminálu: pip install pwinput
+
 # texts 
 
 texts = ['''
@@ -41,7 +43,7 @@ password = ('123', 'pass123', 'password123', 'pass1234')
 sep = '-' * 40
 dblsep = '=' * 40
 star = '*'
-import pwinput #naistalovaný modul pwinput v terminálu: pip install pwinput
+
 
 #pozdravení uživatele 
 print(dblsep, end = '\n')
@@ -58,7 +60,7 @@ while True:
     if user in users and passwrd in password and users.index(user) is password.index(passwrd):
         print(sep, end='\n')
         print(f'Welcome to the app, {user}')
-        print('We have 3 texts to be analyzed.')
+        print('We have some texts to be analyzed.')
         print(sep, end='\n')
         break
     else:
@@ -70,9 +72,9 @@ while True:
 
 
 while True:
-    enter_text = input("Enter text's number btw. 1 and 3: ")
+    enter_text = input("Enter text's number: ")
 
-    if enter_text.isnumeric() and len(texts) >= int(enter_text):
+    if enter_text.isnumeric() and len(texts) >= int(enter_text) and int(enter_text) > 0:
         print(f'Your choice is text{enter_text}')
         break
     else:
@@ -107,17 +109,17 @@ for i in split_text:
 print(f'There are {upper1_count} titlecase words')
 
 #výpočet počtu slov ALL UPPER
-upper1_count = 0
+upper2_count = 0
 for i in split_text:
      if i.isupper() and i.isalpha():
-         upper1_count = upper1_count + 1
-print(f'There are {upper1_count} uppercase words')
+         upper2_count = upper2_count + 1
+print(f'There are {upper2_count} uppercase words')
 
-upper1_count = 0
+upper3_count = 0
 for i in split_text:
      if i.islower():
-         upper1_count = upper1_count + 1
-print(f'There are {upper1_count} lowercase words')
+         upper3_count = upper3_count + 1
+print(f'There are {upper3_count} lowercase words')
 
 #ekvivalentní výpočet počtu slov ALL UPPER - funkce MAP
 # all_upper = sum(map(str.isupper, selected_text.split())) 
